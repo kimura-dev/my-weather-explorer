@@ -19,7 +19,7 @@ function openApp(){
 		$('#info').show();
 		$('#instruction').html('<p class="col span-1-of-2">Explore anywhere on the map, then <strong>Click</strong> and get the locations weather listed below.</p>');
 		$('#info').html(`
-			<div id="location-box" class="col span-1-of-2" aria-live="assertive">
+			<div id="location-box" class="col span-1-of-2" aria-live="polite">
 				<div>
 					<p><span>Your Location</span></p>
 					<p><span id="flag"></span></p>
@@ -37,9 +37,9 @@ function openApp(){
 	})
 }
 
-/*---------------------------------------*/
-	/*// GEOLOCATES & CALLS GETGOOGLEMAP() */
-/*---------------------------------------*/
+/*-------------------------------------------*/
+	/* GEOLOCATES & CALLS GETGOOGLEMAP() 
+/*-------------------------------------------*/
 function searchIpStack(){
 
 	$.getJSON("https://api.ipstack.com/check?access_key=c6ee8187642a24e73533d2395851c34c", function(data){
@@ -63,9 +63,9 @@ function searchIpStack(){
 	})
 	
 }
-/*---------------------------------------*/
-	/*//Gets Google Map & ADDS EVENT LISTENER*/
-/*---------------------------------------*/
+/*---------------------------------------------*/
+	/* Gets Google Map & ADDS EVENT LISTENER
+/*---------------------------------------------*/
 function getGoogleMaps(lat,long){
 	let yourPosition = new google.maps.LatLng(lat, long);
 	let mapOptions = {
@@ -82,7 +82,7 @@ function getGoogleMaps(lat,long){
 	}
 	let map = new google.maps.Map(document.getElementById('map'), mapOptions);
 /*------------------------------------------------*/
-	/* Displays weather info on the maps click*/
+	/* Displays weather info on the maps click
 /*------------------------------------------------*/
 	map.addListener('click', function(e) {
       	placeMarkerAndPanTo(e.latLng, map);
