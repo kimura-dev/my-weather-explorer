@@ -8,7 +8,7 @@ I created this app so that users could have a fast and easy way to access weathe
 This application is easy to use
 Click the link below to access to WEATHER MAP application:
 
-https://kimura-dev1297.github.io/Thinkful-API-project/
+https://kimura-dev1297.github.io/my-weather-explorer/
 
 Home Page
 
