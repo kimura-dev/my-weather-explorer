@@ -1,4 +1,4 @@
-##WEATHER EXPLORER 
+##[]WEATHER EXPLORER 
 
 
 Weather Explorer gives users the ability to search any location they desire, then simply click that location and have the its weather forcast provided.
