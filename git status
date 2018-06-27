@@ -1,0 +1,29 @@
+[33mcommit d6298a70a896ffb0cfe289ace6b4d4aa8a859660[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Scott Reyell <smreyell@gmail.com>
+Date:   Sat Jun 23 14:41:08 2018 -0700
+
+    work on most fixes, app looks feels and acts successfully
+
+[33mcommit 4069035b62f05a1fd5201d578f7f3421a991c8a3[m
+Author: Scott Reyell <smreyell@gmail.com>
+Date:   Sat Jun 23 10:43:22 2018 -0700
+
+    made some updates to the UI, now working on NVDA compatibiltiy
+
+[33mcommit 201f60835a6ca7536f2a9c8a30775d2922fda8ad[m
+Author: Scott Reyell <smreyell@gmail.com>
+Date:   Fri Jun 22 18:57:45 2018 -0700
+
+    ecked with Chuck apps works good needs work on UI
+
+[33mcommit c8e029e9eadba0630092565e4bcf437ea32b85cb[m
+Author: Scott Reyell <smreyell@gmail.com>
+Date:   Fri Jun 22 13:53:12 2018 -0700
+
+    Api is working properly I am going to contiune to try and enhance the experience
+
+[33mcommit f779e1f931def5c499079e7b278e9098eeb6559e[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mresponsive/dynamic[m[33m)[m
+Author: Scott Reyell <smreyell@gmail.com>
+Date:   Wed Jun 20 11:57:13 2018 -0700
+
+    intital commit

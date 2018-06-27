@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=utf-8>
+	<meta name="Weather Explorer App" content="A location and weather APP, which will give you the weather for any location you click on the map.">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Weather Explorer App by Scott Reyell</title>
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="grid.css">
+
+</head>
+<body>
+	<header role="banner" id="opener" aria-live="polite">
+		<div aria-live="polite">
+			<h1><span><ion-icon name="partly-sunny" class="icon"></ion-icon></span>WEATHER EXPLORER</h1>
+		</div>
+		<div aria-live="polite">
+			<p class="para1">Zoom, drag or drop your way to any location on the map,</p>
+			<p class="para2"><strong>Click</strong> and it's weather forecast is yours.</p>
+			<p class="para3">Explore the world!</p>
+	 		<button id="startAppBtn" aria-live="polite">Launch</button>
+ 		</div>
+	</header>
+
+	<section role="main" id="info" class="row"></section>
+		<div class="whole-box">
+
+			<div class="col span-1-of-2" id="map-box">
+				<div id="map"></div>
+			</div>	
+
+	<section id="instruction"></section>
+
+	<section id="weather-info" class="row"></section>
+
+<script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDyJWrWjidwjnDvw-kAbUghbXYOFETwKg&callback=initMap"
+    async defer></script>	
+<script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
+</body>
+</html>
