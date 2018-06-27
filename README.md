@@ -5,7 +5,7 @@ Weather Explorer gives users the ability to search any location they desire, the
 
 I created this app so that users could have a fast and easy way to access weather forecasts for any area in the world. It's design makes it easy, fun and convenient to use. 
 
-Click the link below to access to WEATHER MAP application:
+Click the link below to access to WEATHER EXPLORER application:
 
 https://kimura-dev1297.github.io/my-weather-explorer/
 
