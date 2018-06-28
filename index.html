@@ -24,19 +24,34 @@
  		</div>
 	</header>
 
-	<section role="main" id="info" class="row" aria-live="polite"></section>
+	<section role="main" id="info" class="row" aria-live="polite">
+		<div id="location-box" class="col span-1-of-2" aria-live="polite">
+			<div>
+				<p><span>Your Location</span></p>
+				<p><span id="flag"></span></p>
+			</div>
+
+			<div><p>
+				<span id="state"></span></p>
+			</div>
+
+			<div><p>
+				<span id="city"></span></p>
+			</div>
+		</div>
+	</section>
 		<div class="whole-box">
 
 			<div class="col span-1-of-2" id="map-box" aria-live="polite">
 				<div id="map"></div>
 			</div>	
 
-	<section id="instruction" aria-live="polite"></section>
+	<section id="instruction" aria-live="polite"><p class="col span-1-of-2">Explore anywhere on the map, then <strong>Click</strong> and get the locations weather listed below.</p></section>
 
 	<section id="weather-info" class="row" aria-live="polite"></section>
 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 <script src="index.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDyJWrWjidwjnDvw-kAbUghbXYOFETwKg&callback=initMap"
     async defer></script>	
 <script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>

@@ -1,41 +1,41 @@
 'use strict';
+let mapReady = false;
 
-$('#info').hide();
-$('#map').hide();
-$('.whole-box').hide();
-
-function initMap(){
-	openApp();
+function onStartButtonClick(){
+	$('header').hide();
+	$('#map').show();
+	$('form').show();
+	$('#info').show();
+	$('#instruction').show();
+	$('#info').show();
 }
-initMap();
+
 /*----------------------------------------------*/
 	/*// CALLS SEARCHIPSTACK() OUTPUTS DATA */
 /*-----------------------------------------------*/
-function openApp(){
-	$('#startAppBtn').click(function(){
-		$('header').hide();
-		$('#map').show();
-		$('form').show();
-		$('#info').show();
-		$('#instruction').html('<p class="col span-1-of-2">Explore anywhere on the map, then <strong>Click</strong> and get the locations weather listed below.</p>');
-		$('#info').html(`
-			<div id="location-box" class="col span-1-of-2" aria-live="polite">
-				<div>
-					<p><span>Your Location</span></p>
-					<p><span id="flag"></span></p>
-				</div>
 
-				<div><p>
-					<span id="state"></span></p>
-				</div>
 
-				<div><p>
-					<span id="city"></span></p>
-				</div>
-			</div>`);
-	searchIpStack();
-	})
+$(function onPageReady(){
+	console.log('page ready, preparing to open app');
+	$('#info').hide();
+	$('#map').hide();
+	// $('.whole-box').hide();
+	$('#startAppBtn').click(onStartButtonClick);
+
+	let interval = setInterval(function(){
+		console.log('testing map ready:', mapReady);
+		if( mapReady ){
+			searchIpStack();
+			clearInterval(interval);
+		}
+	}, 100);
+
+})
+function initMap(){
+	console.log('initMap called');
+	mapReady = true;
 }
+
 
 /*-------------------------------------------*/
 	/* GEOLOCATES & CALLS GETGOOGLEMAP() 
