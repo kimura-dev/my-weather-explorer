@@ -12,9 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-
+	
 <section id="mySidenav" class="sidenav" aria-live="polite"></section>
-
 <div id="main-box">
 
 	<header role="banner" id="intro" class="row" aria-live="polite">
@@ -29,21 +28,23 @@
 	
 
 	<main role="main" class="row" id="main-box" aria-live="polite">
-		<div class="forecast-box">
+		<div id="forecast-box" class="col-3">
 			<p id="forecast" onclick="openNav()"></p>
 		</div>
-		<div id="floating-panel">
-      		<input id="address" type="textbox" placeholder="Type in location">
-      		<button id="submit" type="button">Search</button>
-    	</div>
-		<div class="col-12">
-			<div id="map"></div>
+		<!--<div class="row">-->
+			<div id="floating-panel" class="col-12">
+	      		<input id="address" type="textbox" placeholder="Type in location">
+	      		<button id="submit" type="button">Search</button>
+	    	</div>
+	    <!--</div>-->
+			<div class="col-12">
+				<div id="map"></div>
 		</div>
-			<!--<p id="instruction">Explore anywhere on the map, then <strong>Click</strong> and get the locations weather listed below.</p>-->
-		<section id="weather-results" class="col-4"></section>
+				<!--<p id="instruction">Explore anywhere on the map, then <strong>Click</strong> and get the locations weather listed below.</p>-->
+			<section id="weather-results" class="col-3"></section>
 	</main>
-</div>
 
+</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 	<script src="index.js"></script>

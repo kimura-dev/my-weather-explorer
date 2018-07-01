@@ -114,7 +114,7 @@ h3 {
 
 /* The side navigation menu */
 .sidenav {
-    height: 660px; /* 100% Full-height */
+    height: 100%; /* 100% Full-height */
     width: 250px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
@@ -163,9 +163,14 @@ h3 {
     margin-right: 10px;
 }
 
-#forecast {
-    display: inline;
-}
+/*#forecast-box {
+    float: left;
+    margin-top: 10px;
+}*/
+
+/*#forecast {
+   float: left;
+}*/
 
 #forecast:hover {
     cursor: pointer;
@@ -184,4 +189,11 @@ h3 {
 /*----------------------------*/
 #address {
     margin-left: 10px;
+}
+
+@media screen and (min-height: 640px){
+    .sidenav {
+        /*width: 25%;*/
+        font-size: 80%;
+    }
 }
