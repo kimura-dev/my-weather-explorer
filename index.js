@@ -9,12 +9,9 @@ function onStartButtonClick(){
 	$('#intro').hide();
 	$('#floating-panel').show()
 }
-
 /*----------------------------------------------*/
 	/*// CALLS SEARCHIPSTACK() OUTPUTS DATA */
 /*-----------------------------------------------*/
-
-
 $(function onPageReady(){
 	console.log('page ready, preparing to open app');
 	$('#instruction').hide();
@@ -25,20 +22,16 @@ $(function onPageReady(){
 	$('#startAppBtn').click(onStartButtonClick);
 
 	let interval = setInterval(function(){
-		console.log('testing map ready:', mapReady);
 		if( mapReady ){
 			searchIpStack();
 			clearInterval(interval);
 		}
 	}, 100);
-
 })
+
 function initMap(){
-	console.log('initMap called');
 	mapReady = true;
 }
-
-
 /*-------------------------------------------*/
 	/* GEOLOCATES & CALLS GETGOOGLEMAP() 
 /*-------------------------------------------*/
@@ -49,7 +42,7 @@ function searchIpStack(){
 		let ip = data.ip;
 		let lat = data.latitude;
 		let long = data.longitude;
-		let state = data.region_name;//state
+		let state = data.region_name;
 	    let city = data.city;
 		let countryCode = "flag-icon flag-icon-"+data.country_code.toLowerCase();
 		
@@ -80,7 +73,7 @@ function getGoogleMaps(lat,long){
 
 	let map = new google.maps.Map(document.getElementById('map'), mapOptions);
 	let markers = [];
-	 let geocoder = new google.maps.Geocoder();
+	let geocoder = new google.maps.Geocoder();
 
 	 document.getElementById('submit').addEventListener('click',function handleSearchEvent(){
 	 	geocodeAddress(geocoder,map);
@@ -101,17 +94,11 @@ function getGoogleMaps(lat,long){
 /*------------------------------------------------*/
 	/* Displays weather info on the maps click
 /*------------------------------------------------*/
-
-	/*let infoWindow = new google.maps.InfoWindow({
-		content : showResults();
-	})*/
 	map.addListener('click', function(e) {
       	placeMarkerAndPanTo(e.latLng, map);
-      	//InfoWindow.open(map,marker);
     });
   
 	function placeMarkerAndPanTo(latLng, map) {
-		/*Clear all markers first*/ 
 		markers.forEach(function(marker){
 			marker.setMap(null)
 		})
@@ -126,7 +113,6 @@ function getGoogleMaps(lat,long){
 	    lat = latLng.lat();
 	    long = latLng.lng();
 		getWeatherResults(lat,long);
-		//marker.setMap(null);			
 	}
 }
 /*------------------------------------------------*/
@@ -147,6 +133,7 @@ function getWeatherResults(lat,long){
 	
 function showResults(data){
 	let newCity =  data.name;
+
 	let newCountryCode = "flag-icon flag-icon-"+data.sys.country.toLowerCase();
 	$('#mySidenav').html(`
   		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
@@ -166,11 +153,10 @@ function showResults(data){
 			<li><p>Visibliity:<span>${data.visibility}</span></p></li>
 			<li><p>Clouds:<span>${data.clouds.all} okta</span></p></li>
 		</ul>`);
-	$('#forecast').html(`Weather Forecast for <span id="newFlag" class="${newCountryCode}"></span> ${newCity}`);
+	$('#forecast').html(`<ion-icon name="information-circle-outline" class="icon"></ion-icon><span id="newFlag" class="${newCountryCode}"></span> ${newCity}`);
 
 	openNav();
 };
-
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
@@ -180,6 +166,6 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
-    document.getElementById("mySidenav").style.left = "-250px";
-    document.getElementById("main-box").style.marginLeft = "0";
+	$('#mySidenav').css('left','-250px');
+	$('#main-box').css('marginLeft','0');
 }
