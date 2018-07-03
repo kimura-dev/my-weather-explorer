@@ -4,7 +4,7 @@
 	<meta charset=utf-8>
 	<meta name=description content="Weather Explorer allows you to search anywhere in the world and pull up any locations weather forecast">
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<title>clean slate 2</title>
+	<title>Weather Exploer Application</title>
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700" rel="stylesheet">
 	 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
@@ -19,8 +19,10 @@
 	<header role="banner" id="intro" class="row" aria-live="polite">
 		<div class="col-12">
 			<h1>WEATHER EXPLORER</h1>
-			<p class="para1">Zoom, drag or drop your way to any location on the map,</p>
-			<p class="para2">OR simply type in an address and the it's current weather is your's</p>
+			<p class="para1">Explore the world in an interactive way!</p>
+			<p class="para2">Search any address or location and </p>
+			<p class="para3">Receive live weather updates. </p>
+
 	 		<button id="startAppBtn">Launch</button>
 		</div>
 	</header>
@@ -33,8 +35,10 @@
 		</div>
 		<!--<div class="row">-->
 			<div id="floating-panel" class="col-12">
-	      		<input id="address" type="textbox" placeholder="Type in location">
-	      		<button id="submit" type="button">Search</button>
+				<form>
+		      		<input id="address" type="textbox" placeholder="Type in a location">
+		      		<button id="submit" type="submit">Search</button>
+	      		</form>
 	    	</div>
 	    <!--</div>-->
 			<div class="col-12">

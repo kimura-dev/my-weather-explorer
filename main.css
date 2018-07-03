@@ -19,13 +19,15 @@ header {
 h1 {
     font-size: 350%;
     text-transform: uppercase;
-    text-shadow: 4px 4px blue;
+    text-shadow: 4px 4px #fff;
+    color: #199CFF;
 }
 
 ul {
     list-style: none;
     padding: 15px;
     font-size: 20px;
+    color: #32FFCE;
 }
 /*---------------------------*/
   /* Your Location Styles
@@ -55,15 +57,10 @@ ul {
 /*---------------------------*/
 #weather-results {
     background-size: cover;
-    /*margin-top: 70px;*/
     margin-left: 15px;
     background-color: #E8E8E8;
     background-size: cover;
-    padding: 0px 0px 50px 40px;
-    font-weight: 300;
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
+    padding: 0px 0px 50px 40px;    
 }
 
 #weather-results li {
@@ -88,10 +85,13 @@ h3 {
     margin-top: 150px;
 }
 
-.para1, .para2 {
+.para1, .para2, .para3 {
+    color: #fff;
     font-size: 125%;
+    font-weight: bold;
+    text-shadow: 5px 5px #000;;
     text-transform: uppercase;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 #startAppBtn {
@@ -106,26 +106,29 @@ h3 {
     background-color: #27ae60;
     cursor: pointer;
 }
-
-
 /*------------------------*/
     /* SIDE BAR STYLES
 /*------------------------*/
-
-/* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 250px; /* 0 width - change this with JavaScript */
+    width: 250px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: -250px;
-    background-color: #e5e5e5; /* */
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)),url("https://image.freepik.com/vrije-photo/fantastische-blauwe-hemel_1203-1929.jpg");
+    background-color: rgba(0,0,75,0.4); /* */
     background-size: cover;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav.expanded {
+    left : 0;
+}
+
+.sidenav.expanded+#main-box {
+    margin-left: 250px;
 }
 
 /* The navigation menu links */
@@ -159,31 +162,14 @@ h3 {
 
 .icon {
     color: #fff;
-    font-size: 18px;
+    font-size: 24px;
     margin-right: 10px;
 }
 
-/*#forecast-box {
-    float: left;
-    margin-top: 10px;
-}*/
-
-/*#forecast {
-   float: left;
-}*/
-
-#forecast:hover {
+.icon:hover {
     cursor: pointer;
     color: green;
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-   /* .sidenav a {font-size: 18px;} */
-}
-
-
 /*----------------------------*/
     /* GEO CODE INPUT STYLES
 /*----------------------------*/
@@ -191,9 +177,12 @@ h3 {
     margin-left: 10px;
 }
 
-@media screen and (min-height: 640px){
-    .sidenav {
-        /*width: 25%;*/
-        font-size: 80%;
-    }
+#floating-panel {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 600px){
+   .sidenav.expanded+#main-box{
+        margin-left: 0;
+   }
 }

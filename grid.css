@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 /* Grid measurements:
  *
  *   960px wide including 12 gutters (half gutters on both edges)
@@ -45,14 +41,10 @@
 }
 
 /* Mobile defaults */
-@media only screen and (min-width: 300px){
+@media only screen and (min-width: 250px){
   .col-3, .col-4, .col-6, .col-12, .sidenav {
     width: 100%;
   }
-
- /* #weather-results {
-    margin-top: 10px;
-  }*/
 }
 /* Non-mobile, grid */
 @media only screen and (min-width: 980px) {
@@ -79,9 +71,4 @@
   .col-12 {
     width: 100%;
   }
-
-  /*#weather-results {
-    margin-top: 75px;
-  }*/
-
 }

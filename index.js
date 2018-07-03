@@ -13,7 +13,6 @@ function onStartButtonClick(){
 	/*// CALLS SEARCHIPSTACK() OUTPUTS DATA */
 /*-----------------------------------------------*/
 $(function onPageReady(){
-	console.log('page ready, preparing to open app');
 	$('#instruction').hide();
 	$('#map').hide();
 	$('#info').hide();
@@ -60,7 +59,7 @@ function getGoogleMaps(lat,long){
 	let mapOptions = {
 		zoom: 10,
 		center: yourPosition,
-		minZoom: 3,
+		minZoom: 0,
 		maxZoom: 18,
 		mapTypeControl:true,
 		mapTypeControlOptions: {
@@ -71,11 +70,12 @@ function getGoogleMaps(lat,long){
 
 	}
 
-	let map = new google.maps.Map(document.getElementById('map'), mapOptions);
+	let map = new google.maps.Map(document.getElementById('map'), mapOptions);	
 	let markers = [];
 	let geocoder = new google.maps.Geocoder();
 
-	 document.getElementById('submit').addEventListener('click',function handleSearchEvent(){
+	 $('form').on('submit',function handleSearchEvent(e){
+	 	e.preventDefault();
 	 	geocodeAddress(geocoder,map);
 	 });
 
@@ -118,7 +118,6 @@ function getGoogleMaps(lat,long){
 /*------------------------------------------------*/
 	/* Retrieves and outputs openweather map api  */
 /*------------------------------------------------*/
-
 function getWeatherResults(lat,long){
 	$.ajax({
 		url: 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&APPID=a30e90ff71187c10af9d6d60fdda44bd',
@@ -133,7 +132,7 @@ function getWeatherResults(lat,long){
 	
 function showResults(data){
 	let newCity =  data.name;
-
+	let windDegree = data.wind.deg;
 	let newCountryCode = "flag-icon flag-icon-"+data.sys.country.toLowerCase();
 	$('#mySidenav').html(`
   		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
@@ -143,7 +142,6 @@ function showResults(data){
 			<li class="top-space"><p>Weather:<span>${data.weather[0].main}</span></p></li>
 			<li><p>Description:<span><img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">${data.weather[0].description}</span><p></li>
 			<li><p>Temperature:<span>${data.main.temp}&#8457</span></p></li>
-			
 			<li><p>Pressure:<span>${data.main.pressure}<span>hpa</span></span></p></li>
 			<li><p>Humidity:<span>${data.main.humidity}%</span></p></li>
 			<li><p>Min-Temp:<span>${data.main.temp_min}&#8457</span></p></li>
@@ -154,18 +152,13 @@ function showResults(data){
 			<li><p>Clouds:<span>${data.clouds.all} okta</span></p></li>
 		</ul>`);
 	$('#forecast').html(`<ion-icon name="information-circle-outline" class="icon"></ion-icon><span id="newFlag" class="${newCountryCode}"></span> ${newCity}`);
-
 	openNav();
 };
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    $("#mySidenav").css('left','0');
-    $("#main-box").css('margin-left','250px');
+    $("#mySidenav").addClass('expanded');
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
-	$('#mySidenav').css('left','-250px');
-	$('#main-box').css('marginLeft','0');
+	$('#mySidenav').removeClass('expanded');
 }
