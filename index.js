@@ -31,33 +31,25 @@ $(function onPageReady(){
 function initMap(){
 	mapReady = true;
 }
-
-if($('#map').on('click') || $('#submit').on('click')){
-	$('instruction').hide();
-}
 /*-------------------------------------------*/
 	/* GEOLOCATES & CALLS GETGOOGLEMAP() 
 /*-------------------------------------------*/
 function searchIpStack(){
 
 	$.getJSON("https://api.ipstack.com/check?access_key=c6ee8187642a24e73533d2395851c34c", function(data){
-		let country = data.country_name;
-		let ip = data.ip;
 		let lat = data.latitude;
 		let long = data.longitude;
-		let state = data.region_name;
-	    let city = data.city;
 		let countryCode = "flag-icon flag-icon-"+data.country_code.toLowerCase();
 		
 		getGoogleMaps(lat,long);
 
 	}).fail(function(){
-		alert('Weather Coordinates Application will be back shortly!')
+		alert('Weather Explorer will be back shortly!')
 	})
 }
-/*---------------------------------------------*/
-	/* Gets Google Map & ADDS EVENT LISTENER
-/*---------------------------------------------*/
+/*--------------------------------------------------*/
+	/* ADDS MAP, GEOCODING & MARKERS
+/*--------------------------------------------------*/
 function getGoogleMaps(lat,long){
 	let yourPosition = new google.maps.LatLng(lat, long);
 	let mapOptions = {
@@ -78,8 +70,11 @@ function getGoogleMaps(lat,long){
 
 	google.maps.event.addListenerOnce(map, 'idle', () => {
   		document.getElementsByTagName('iframe')[0].title = "Google Maps";
-  		document.getElementsByTagName('iframe')[0].lang = "en";
 	});
+
+/*------------------*/
+	/* GEOCODING 
+/*------------------*/
 
 	let markers = [];
 	let geocoder = new google.maps.Geocoder();
@@ -102,7 +97,7 @@ function getGoogleMaps(lat,long){
         });
     }
 /*------------------------------------------------*/
-	/* Displays weather info on the maps click
+	/* Displays weather info on map click
 /*------------------------------------------------*/
 	map.addListener('click', function(e) {
       	placeMarkerAndPanTo(e.latLng, map);
@@ -112,9 +107,12 @@ function getGoogleMaps(lat,long){
 		markers.forEach(function(marker){
 			marker.setMap(null)
 		})
+		let iconImage = 'weather-explorer.png'
 		var marker = new google.maps.Marker({
 		  	position: latLng,
-		  	map: map
+		  	map: map,
+		  	animation: google.maps.Animation.DROP,
+		  	icon: iconImage
 		});
 
 		markers.push(marker)
@@ -167,8 +165,6 @@ function showResults(data){
 	
 	openNav();
 };
-
-
 
 function openNav() {
     $("#mySidenav").addClass('expanded');

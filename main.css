@@ -6,7 +6,6 @@
 
 body {
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,100,0.8), rgba(0,0,0,0.8)),url("https://ak9.picdn.net/shutterstock/videos/9025099/thumb/1.jpg");
-    /*background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,125,0.8)),url("https://ak9.picdn.net/shutterstock/videos/9025099/thumb/1.jpg");*/
     background-size: cover;
     height:100vh;
     font-family: 'Raleway', sans-serif;
@@ -46,18 +45,6 @@ button:hover {
 /*---------------------------*/
   /* Your Location Styles
 /*---------------------------*/
-#location-box {
-    color: #fff;
-    margin-top: 25px;
-    font-size: 100%;
-    text-shadow: 1px 1px red;
-    letter-spacing: 0.01em
-}
-
-#info li {
-    display: inline;
-}
-
 #forecast-box {
     margin-top: 5px;
 }
@@ -65,7 +52,6 @@ button:hover {
 #forecast {
     color: #f5f5dc;
 } 
-
 /*---------------------------*/
   /* MAP STYLES
 /*---------------------------*/
@@ -88,8 +74,9 @@ h3 {
     text-shadow: 2px 2px #000;
 }
 
-#newCountyCode {
-    margin-right: 5px;
+.flag-icon-us {
+    margin-right: 8px;
+    margin-left: 3px;
 }
 /*---------------------------*/
   /* Intro Styles
