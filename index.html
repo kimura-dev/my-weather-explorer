@@ -5,7 +5,7 @@
 	<meta name=description content="Weather Explorer allows you to search anywhere in the world and pull up any locations weather forecast">
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>Weather Exploer Application</title>
-	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
 	<link rel="stylesheet" type="text/css" href="grid.css">
@@ -33,19 +33,16 @@
 		<div id="forecast-box" class="col-3">
 			<p id="forecast" onclick="openNav()"></p>
 		</div>
-		<!--<div class="row">-->
-			<div id="floating-panel" class="col-12">
-				<form>
-		      		<input id="address" type="textbox" placeholder="Type in a location">
-		      		<button id="submit" type="submit">Search</button>
-	      		</form>
-	    	</div>
-	    <!--</div>-->
-			<div class="col-12">
-				<div id="map"></div>
+		<div id="floating-panel" class="col-12">
+			<form>
+	      		<input id="address" type="textbox" placeholder="Type in a location">
+	      		<button id="submit" type="submit">Search</button>
+      		</form>
+    	</div>
+		<div class="col-12">
+			<div id="map"></div>
 		</div>
-				<!--<p id="instruction">Explore anywhere on the map, then <strong>Click</strong> and get the locations weather listed below.</p>-->
-			<section id="weather-results" class="col-3"></section>
+		<section id="weather-results" class="col-3"></section>
 	</main>
 
 </div>
