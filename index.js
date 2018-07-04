@@ -13,9 +13,9 @@ function onStartButtonClick(){
 	/*// CALLS SEARCHIPSTACK() OUTPUTS DATA */
 /*-----------------------------------------------*/
 $(function onPageReady(){
-	$('#instruction').hide();
 	$('#map').hide();
 	$('#info').hide();
+	$('#instruction').hide();
 	$('#weather-results').hide();
 	$('#floating-panel').hide()
 	$('#startAppBtn').click(onStartButtonClick);
@@ -30,6 +30,10 @@ $(function onPageReady(){
 
 function initMap(){
 	mapReady = true;
+}
+
+if($('#map').on('click') || $('#submit').on('click')){
+	$('instruction').hide();
 }
 /*-------------------------------------------*/
 	/* GEOLOCATES & CALLS GETGOOGLEMAP() 
@@ -70,7 +74,13 @@ function getGoogleMaps(lat,long){
 
 	}
 
-	let map = new google.maps.Map(document.getElementById('map'), mapOptions);	
+	let map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+	google.maps.event.addListenerOnce(map, 'idle', () => {
+  		document.getElementsByTagName('iframe')[0].title = "Google Maps";
+  		document.getElementsByTagName('iframe')[0].lang = "en";
+	});
+
 	let markers = [];
 	let geocoder = new google.maps.Geocoder();
 
@@ -136,7 +146,7 @@ function showResults(data){
 	let newCountryCode = "flag-icon flag-icon-"+data.sys.country.toLowerCase();
 	$('#mySidenav').html(`
   		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
-		<h3 class="current">Weather for <span id="newFlag" class="${newCountryCode}"></span>${newCity}, ${data.sys.country} </h3>
+		<h3 class="current">Weather for <span id="newCountryCode" class="${newCountryCode}"></span>${newCity}, ${data.sys.country} </h3>
 		<hr>
 		<ul>
 			<li class="top-space"><p>Weather:<span>${data.weather[0].main}</span></p></li>
@@ -151,14 +161,19 @@ function showResults(data){
 			<li><p>Visibliity:<span>${data.visibility}</span></p></li>
 			<li><p>Clouds:<span>${data.clouds.all} okta</span></p></li>
 		</ul>`);
+
 	$('#forecast').html(`<ion-icon name="information-circle-outline" class="icon"></ion-icon><span id="newFlag" class="${newCountryCode}"></span> ${newCity}`);
+	$('#instruction').hide();	
+	
 	openNav();
 };
+
+
 
 function openNav() {
     $("#mySidenav").addClass('expanded');
 }
 
 function closeNav() {
-	$('#mySidenav').removeClass('expanded');
+	$('#mySidenav').removeClass('expanded');	 	
 }

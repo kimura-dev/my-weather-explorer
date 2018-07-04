@@ -12,44 +12,40 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	
-<section id="mySidenav" class="sidenav" aria-live="polite"></section>
-<div id="main-box">
-
-	<header role="banner" id="intro" class="row" aria-live="polite">
-		<div class="col-12">
-			<h1>WEATHER EXPLORER</h1>
-			<p class="para1">Explore the world in an interactive way!</p>
-			<p class="para2">Search any address or location and </p>
-			<p class="para3">Receive live weather updates. </p>
-
-	 		<button id="startAppBtn">Launch</button>
-		</div>
-	</header>
-
-	
-
-	<main role="main" class="row" id="main-box" aria-live="polite">
-		<div id="forecast-box" class="col-3">
-			<p id="forecast" onclick="openNav()"></p>
-		</div>
-		<div id="floating-panel" class="col-12">
-			<form>
-	      		<input id="address" type="textbox" placeholder="Type in a location">
-	      		<button id="submit" type="submit">Search</button>
-      		</form>
-    	</div>
-		<div class="col-12">
-			<div id="map"></div>
-		</div>
-		<section id="weather-results" class="col-3"></section>
-	</main>
-
-</div>
+	<section role="region" id="mySidenav" class="sidenav" aria-live="polite"></section>	
+	<div class="container">
+		<header role="banner" id="intro" class="row" aria-live="polite">
+			<div class="col-12">
+				<h1>WEATHER EXPLORER</h1>
+				<p class="para1">Explore the world in an interactive way!</p>
+				<p class="para2">Search any address or location and </p>
+				<p class="para3">Receive live weather updates. </p>
+				<button id="startAppBtn">Launch</button>
+			</div>
+		</header>
+		<main role="main" class="row" id="main-box" aria-live="polite">
+			<div id="forecast-box" class="col-12">
+				<p id="forecast" onclick="openNav()"></p>
+			</div>
+			<div id="floating-panel" class="col-12">
+				<p id="instruction" title="instructions">Search manually or type your location below!</p>
+				<form role="form">
+					<label for="address" title="search">
+		      			<input id="address" type="textbox" placeholder="Type in a location">
+		      		</label>
+		      		<button id="submit" type="submit">Search</button>
+	      		</form>
+	    	</div>
+			<div class="col-12">
+				<div id="map" aria-live="polite"></div>
+			</div>
+			<section role="region" id="weather-results" class="col-3"></section>
+		</main>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 	<script src="index.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDyJWrWjidwjnDvw-kAbUghbXYOFETwKg&callback=initMap"
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDyJWrWjidwjnDvw-kAbUghbXYOFETwKg&language=en&callback=initMap"
     async defer></script>
 	<script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
 

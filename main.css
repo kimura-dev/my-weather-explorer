@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,125,0.8)),url("https://ak9.picdn.net/shutterstock/videos/9025099/thumb/1.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,100,0.8), rgba(0,0,0,0.8)),url("https://ak9.picdn.net/shutterstock/videos/9025099/thumb/1.jpg");
+    /*background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,125,0.8)),url("https://ak9.picdn.net/shutterstock/videos/9025099/thumb/1.jpg");*/
     background-size: cover;
     height:100vh;
     font-family: 'Raleway', sans-serif;
@@ -22,8 +23,7 @@ h1 {
     text-transform: uppercase;
     color: #f5f5dc;
     border: 2px solid #fff;
-   background: linear-gradient(to right, rgba(0,0,125,0.8), rgba(0,110,0,0.8));
-   /* background-color: rgba(0,0,250,0.2);*/
+    background: linear-gradient(to right, rgba(0,0,35,0.8), rgba(0,0,150,0.8), rgba(0,0,35,0.8));
     text-shadow: 5px 5px #000;
     
 }
@@ -88,7 +88,7 @@ h3 {
     text-shadow: 2px 2px #000;
 }
 
-#newFlag {
+#newCountyCode {
     margin-right: 5px;
 }
 /*---------------------------*/
@@ -125,28 +125,27 @@ h3 {
     /* SIDE BAR STYLES
 /*------------------------*/
 .sidenav {
-    height: 100%; /* 100% Full-height */
+    height: 100%; 
     width: 250px;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    position: fixed;
+    z-index: 1; 
     top: 0;
     left: -250px;
     line-height: 1.3;
     background-color: rgba(0,0,45,0.8); /* */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
 }
 
 .sidenav.expanded {
     left : 0;
 }
 
-.sidenav.expanded+#main-box {
+.sidenav.expanded+.container {
     margin-left: 250px;
 }
 
-/* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -156,12 +155,10 @@ h3 {
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover{
     color: #818181;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -170,8 +167,7 @@ h3 {
     margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main-box {
+.container {
     transition: margin-left .5s;
 }
 
@@ -180,7 +176,6 @@ h3 {
     font-size: 24px;
     margin-right: 10px;
     transition: 0.2s;
-
 }
 
 .icon:hover {
@@ -190,12 +185,15 @@ h3 {
 /*----------------------------*/
     /* GEO CODE INPUT STYLES
 /*----------------------------*/
-#address {
-    margin-left: 10px;
-}
 
 #floating-panel {
     margin-top: 10px;
+}
+
+#instruction {
+    font-size: 100%;
+    padding-bottom: 10px;
+    color: #f5f5dc
 }
 
 @media screen and (min-width: 640px){
@@ -218,7 +216,7 @@ h3 {
 }
 
 @media screen and (max-width: 600px){
-   .sidenav.expanded+#main-box{
+   .sidenav.expanded+.container{
         margin-left: 0;
    }
 }
