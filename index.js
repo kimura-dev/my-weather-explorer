@@ -142,11 +142,11 @@ function showResults(data){
 			<li class="top-space"><p>Weather:<span>${data.weather[0].main}</span></p></li>
 			<li><p>Description:<span><img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">${data.weather[0].description}</span><p></li>
 			<li><p>Temperature:<span>${data.main.temp}&#8457</span></p></li>
-			<li><p>Pressure:<span>${data.main.pressure}<span>hpa</span></span></p></li>
+			<li><p>Pressure:<span>${data.main.pressure}<span>hPa</span></span></p></li>
 			<li><p>Humidity:<span>${data.main.humidity}%</span></p></li>
 			<li><p>Min-Temp:<span>${data.main.temp_min}&#8457</span></p></li>
 			<li><p>Max-Temp:<span>${data.main.temp_max}&#8457</span></p></li>
-			<li><p>Wind Speed:<span>${data.wind.speed} m/s</span></p></li>
+			<li><p>Wind Speed:<span>${data.wind.speed}m/s</span></p></li>
 			<li><p>Wind Direction:<span>${data.wind.deg}&deg</span></p></li>
 			<li><p>Visibliity:<span>${data.visibility}</span></p></li>
 			<li><p>Clouds:<span>${data.clouds.all} okta</span></p></li>
