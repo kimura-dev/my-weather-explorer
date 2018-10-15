@@ -1,33 +1,6 @@
-WEATHER EXPLORER 
+# WEATHER EXPLORER 
 
-
-
-
-Weather Explorer gives users the ability to search any location they desire, then simply click that location and have the its weather forcast provided.
-
-I created this app so that users could have a fast and easy way to access weather forecasts for any area in the world. It's design makes it easy, fun and convenient to use. 
-
-Click the link below to access to WEATHER EXPLORER application:
-
-https://kimura-dev1297.github.io/my-weather-explorer/
-
-Home Page
-
-The home page offers instructions for the user on how to use the application. You use the map to search for areas and find there weather forecasts.
-
-![2018-06-27 2](https://user-images.githubusercontent.com/37715269/41988830-2bc70584-79f2-11e8-95ee-4dc9c0827c70.png)
-
-Main Page
-
-The main page has the users location with city and state fixed in the upper left hand corner of the page. The map the user will be using is located in the center of the page.
-
-![2018-06-27](https://user-images.githubusercontent.com/37715269/41988833-2f341ac2-79f2-11e8-845b-2ff6812f8b83.png)
-
-Weather Results
-
-The weather results section of the page has 11 weather items included.
-
-![2018-06-27 1](https://user-images.githubusercontent.com/37715269/41988838-3356dae0-79f2-11e8-807b-cb05d83f6b22.png)
+Link to live site: https://kimura-dev1297.github.io/my-weather-explorer/
 
 I built this application using:
 
@@ -40,3 +13,22 @@ I built this application using:
 -IPSTACK API
 -Openweather Map API
 -Google Maps Javascirpt API 
+
+Weather Explorer gives users the ability to search any location they desire, then simply click that location and have the its weather forcast provided.
+
+I created this app so that users could have a fast and easy way to access weather forecasts for any area in the world. It's design makes it easy, fun and convenient to use. 
+
+The home page offers instructions for the user on how to use the application. You use the map to search for areas and find there weather forecasts.
+
+![2018-10-14](https://user-images.githubusercontent.com/37715269/46935278-89d00b80-d00f-11e8-9d1e-21db5a700d8b.png)
+
+You canuse the search input bar to type in any address or location and an api call to global maps is made.
+
+![2018-10-15](https://user-images.githubusercontent.com/37715269/46935296-9a808180-d00f-11e8-92f0-1147e88cdbca.png)
+
+ Simultanelously a call goes to the openweathermaps API and then the locations weather data appears.
+
+
+![2018-10-15 1](https://user-images.githubusercontent.com/37715269/46935281-8ccafc00-d00f-11e8-824c-aab910fa64ac.png)
+
+
