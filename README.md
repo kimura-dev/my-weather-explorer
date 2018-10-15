@@ -14,7 +14,7 @@ I built this application using:
 -Openweather Map API
 -Google Maps Javascirpt API 
 
-Weather Explorer is my attempt at working with as many useful API's as I can in one application. I used IPSTACK API for geolocation of the user to populate there current locations weather info. 
+Weather Explorer is my attempt at working with as many useful API's as I can in one application. I used IPSTACK API for geolocation of the user. 
 
 ![2018-10-14](https://user-images.githubusercontent.com/37715269/46935278-89d00b80-d00f-11e8-9d1e-21db5a700d8b.png)
 
