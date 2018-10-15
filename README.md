@@ -10,19 +10,15 @@ I built this application using:
 
  Three API's used:
 
--IPSTACK API
+-IPSTACK API for Geolocation
 -Openweather Map API
 -Google Maps Javascirpt API 
 
-Weather Explorer gives users the ability to search any location they desire, then simply click that location and have the its weather forcast provided.
-
-I created this app so that users could have a fast and easy way to access weather forecasts for any area in the world. It's design makes it easy, fun and convenient to use. 
-
-The home page offers instructions for the user on how to use the application. You use the map to search for areas and find there weather forecasts.
+Weather Explorer is my attempt at working with as many useful API's as I can in one application. I used IPSTACK API for geolocation of the user to populate there current locations weather info. 
 
 ![2018-10-14](https://user-images.githubusercontent.com/37715269/46935278-89d00b80-d00f-11e8-9d1e-21db5a700d8b.png)
 
-You canuse the search input bar to type in any address or location and an api call to global maps is made.
+You can use the search input bar to type in any address or location and an API call to global maps is made. Also you can use the google maps search features as well that come installed with the map to find locations manually.
 
 ![2018-10-15](https://user-images.githubusercontent.com/37715269/46935296-9a808180-d00f-11e8-92f0-1147e88cdbca.png)
 
@@ -30,5 +26,8 @@ You canuse the search input bar to type in any address or location and an api ca
 
 
 ![2018-10-15 1](https://user-images.githubusercontent.com/37715269/46935281-8ccafc00-d00f-11e8-824c-aab910fa64ac.png)
+
+
+And like magic the weather forcest is there. So three API calls later and there you have it, the Weather Explorer App.
 
 
