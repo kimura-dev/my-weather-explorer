@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,100,0.8), rgba(0,0,0,0.8)),url("https://ak9.picdn.net/shutterstock/videos/9025099/thumb/1.jpg");
+    /* background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,100,0.8), rgba(0,0,0,0.8)),url("https://ak9.picdn.net/shutterstock/videos/9025099/thumb/1.jpg"); */
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,100,0.8), rgba(0,0,0,0.8)),url("https://images.unsplash.com/uploads/1412750321034baa5d127/d35c5980?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2688&q=80");
     background-size: cover;
     height:100vh;
     font-family: 'Raleway', sans-serif;
@@ -17,14 +18,22 @@ header {
     color: #fff;
 }
 
+#intro h1 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 8px;
+    border-radius: 50px 50px 50px 50px;
+}
+
 h1 {
     font-size: 300%;
     text-transform: uppercase;
     color: #f5f5dc;
-    border: 2px solid #fff;
+    border: 3px solid #099440;
     background: linear-gradient(to right, rgba(0,0,35,0.8), rgba(0,0,150,0.8), rgba(0,0,35,0.8));
     text-shadow: 5px 5px #000;
-    
 }
 
 ul {
@@ -96,17 +105,49 @@ h3 {
 }
 
 #startAppBtn {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: red;
-    color: #fff;
-    border-radius: 50%;
-    text-transform: uppercase;
+    margin-top: 30px;
+    -moz-box-shadow: 0px 10px 14px -7px #6b997d;
+	-webkit-box-shadow: 0px 10px 14px -7px #6b997d;
+	box-shadow: 0px 10px 14px -7px #6b997d;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #269440), color-stop(1, #099440));
+	background:-moz-linear-gradient(top, #269440 5%, #099440 100%);
+	background:-webkit-linear-gradient(top, #269440 5%, #099440 100%);
+	background:-o-linear-gradient(top, #269440 5%, #099440 100%);
+	background:-ms-linear-gradient(top, #269440 5%, #099440 100%);
+	background:linear-gradient(to bottom, #269440 5%, #099440 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#269440', endColorstr='#099440',GradientType=0);
+	background-color:#269440;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #228f1d;
+    text-transform:  uppercase;
 }
 
 #startAppBtn:hover {
-    background-color: #27ae60;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2f9458), color-stop(1, #45c478));
+	background:-moz-linear-gradient(top, #2d804e 5%, #2d804e 100%);
+	background:-webkit-linear-gradient(top, #2d804e 5%, #2d804e 100%);
+	background:-o-linear-gradient(top, #2d804e 5%, #2d804e 100%);
+	background:-ms-linear-gradient(top, #2d804e 5%, #2d804e 100%);
+	background:linear-gradient(to bottom, #2d804e 5%, #2d804e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d804e', endColorstr='#2d804e',GradientType=0);
+    background-color:#2d804e;
+	box-shadow: 0px 2px 25px 30px #3ba162;	
     cursor: pointer;
+}
+
+#startAppBtn:active {
+    position:relative;
+    top:1px;
 }
 /*------------------------*/
     /* SIDE BAR STYLES
