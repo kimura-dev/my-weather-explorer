@@ -148,7 +148,9 @@ function showResults(data){
 		<hr>
 		<ul>
 			<li class="top-space"><p>Weather:<span>${data.weather[0].main}</span></p></li>
-			<li><p>Description:<span><img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">${data.weather[0].description}</span><p></li>
+			<div class="weather-icon-container">
+				<li><p>Description:<span><img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">${data.weather[0].description}</span><p></li>
+			<div>
 			<li><p>Temperature:<span>${data.main.temp}&#8457</span></p></li>
 			<li><p>Pressure:<span>${data.main.pressure}<span>hPa</span></span></p></li>
 			<li><p>Humidity:<span>${data.main.humidity}%</span></p></li>
