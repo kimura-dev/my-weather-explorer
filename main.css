@@ -38,7 +38,7 @@ h1 {
 
 ul {
     list-style: none;
-    padding: 25px;
+    padding: 8px;
     font-size: 20px;
     color: #f5f5dc;
     background-color: rgba(192,192,192,0.3);
@@ -65,8 +65,10 @@ button:hover {
   /* MAP STYLES
 /*---------------------------*/
 #map { 
-    width: 100%;
+    max-width: 1200px;
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
     height: 600px;
 }
 /*---------------------------*/
